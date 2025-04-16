@@ -1,13 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package Portafolio.Portafolio.domain;
 
-/**
- *
- * @author Fabián
- */
-public class RutaPermit {
+package Portafolio.Portafolio.domain;
+import jakarta.persistence.*;
+import java.io.Serializable;
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name="ruta_permit")
+
+public class RutaPermit implements Serializable {
+    
+     private static final long serialVersionUID = 1l;    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id_ruta")
+    private Long idRuta;        
+    private String patron;
+
+    
     
 }

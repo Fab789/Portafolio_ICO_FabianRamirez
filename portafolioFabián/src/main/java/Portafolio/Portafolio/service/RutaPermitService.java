@@ -1,13 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
+
 package Portafolio.Portafolio.service;
 
-/**
- *
- * @author Fabián
- */
+import Portafolio.Portafolio.domain.RutaPermit;
+import java.util.List;
+
 public interface RutaPermitService {
+      // Se obtiene un listado de rutapermits en un List
+    public List<RutaPermit> getRutaPermits();
     
+    public String[] getRutaPermitsString();
+    
+    // Se obtiene un RutaPermit, a partir del id de un rutaPermit
+    public RutaPermit getRutaPermit(RutaPermit rutaPermit);
+       
+    public void save(RutaPermit rutapermit);
+    
+    // Se elimina el rutapermit que tiene el id pasado por parámetro
+    public void delete(RutaPermit rutaPermit);
+    
+ 
 }
